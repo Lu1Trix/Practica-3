@@ -388,7 +388,7 @@ string DeCoDe2(const char* documento, unsigned int semilla){
     folder.open(documento);
 
     //Obtener arreglo en binario.
-    while (!folder.good()){
+    while (folder.good()){
         codificado += folder.get();
     }
     codificado = codificado.substr(0,codificado.size()-1);
